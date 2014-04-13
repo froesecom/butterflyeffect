@@ -1,6 +1,6 @@
 GamesApp::Application.routes.draw do
-  root :to => 'games#index'
-  get '/home' => 'games#home'
+  root :to => 'games#home'
+  get '/games/:first_name' => 'games#index'
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
